@@ -1,4 +1,6 @@
-# Домашнее задание к занятию "6. Работа с файлами, DnD"
+# Домашнее задание к занятию "6. Работа с файлами, DnD" [![Build status](https://ci.appveyor.com/api/projects/status/aniyptbd54fs6csa?svg=true)](https://ci.appveyor.com/project/bas27/fpyahj-trello-dnd-6)
+
+[Ссылка](https://bas27.github.io/fpyahj-trello.dnd-6/)
 
 Правила сдачи задания:
 
