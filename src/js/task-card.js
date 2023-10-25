@@ -1,6 +1,8 @@
 export default class TaskCard {
   #el;
+
   #styles;
+
   constructor(element) {
     this.#el = element;
     this.#styles = window.getComputedStyle(element);

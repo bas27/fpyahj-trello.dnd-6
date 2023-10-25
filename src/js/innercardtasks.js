@@ -45,6 +45,7 @@ export default class InnCardTesks {
   static get anotherSelector() {
     return ".another";
   }
+
   static get addButtonContainerSelector() {
     return ".add-button-container";
   }
@@ -65,22 +66,22 @@ export default class InnCardTesks {
     ].filter(
       (el) =>
         !el.classList.contains(this.title.toLowerCase()) &&
-        el.classList.length < 2
+        el.classList.length < 2,
     )[0];
     this.tasks = this.cardTasks.querySelector(InnCardTesks.tasksSelector);
     this.descriptionCard = this.cardTasks.querySelector(
-      InnCardTesks.descriptionCardSelector
+      InnCardTesks.descriptionCardSelector,
     );
     this.addCard = this.cardTasks.querySelector(InnCardTesks.addCardSelector);
     this.another = this.cardTasks.querySelector(InnCardTesks.anotherSelector);
     this.addButtonContainer = this.cardTasks.querySelector(
-      InnCardTesks.addButtonContainerSelector
+      InnCardTesks.addButtonContainerSelector,
     );
     this.addButton = this.cardTasks.querySelector(
-      InnCardTesks.addButtonSelector
+      InnCardTesks.addButtonSelector,
     );
     this.closeDescription = this.cardTasks.querySelector(
-      InnCardTesks.closeDescriptionSelector
+      InnCardTesks.closeDescriptionSelector,
     );
     this.innTitle();
     if (this.saveTasks) this.tasks.innerHTML = this.saveTasks;
@@ -88,7 +89,7 @@ export default class InnCardTesks {
   }
 
   onClick = (e) => {
-    const target = e.target;
+    const { target } = e;
     const unActiveAnother = [
       ...document.querySelectorAll(InnCardTesks.anotherSelector),
     ].filter((el) => el.classList.contains("invisible"));
@@ -122,7 +123,7 @@ export default class InnCardTesks {
 
   innTitle() {
     const titleList = this.title.split(" ");
-    for (let title of titleList) {
+    for (const title of titleList) {
       this.cardTasks.classList.add(title.toLowerCase());
     }
     this.cardTasks.querySelector("h2").textContent = titleList
@@ -137,7 +138,7 @@ export default class InnCardTesks {
     if (this.descriptionCard.value !== "") {
       const task = document.createElement("li");
       task.classList.add("task");
-      task.setAttribute('draggable', true);
+      task.setAttribute("draggable", true);
       task.innerHTML = `
             <p>${this.descriptionCard.value}</p>
             <div class="close-task"></div>

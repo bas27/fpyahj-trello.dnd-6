@@ -1,6 +1,5 @@
 import TaskCard from "./task-card";
 
-
 export default class Controller {
   constructor(container) {
     this.container = container;
@@ -31,7 +30,7 @@ export default class Controller {
   }
 
   proectionAct(e) {
-    const target = e.target;
+    const { target } = e;
     const element = this.draggingElement;
     const proection = this.draggingProection;
     if (
@@ -62,7 +61,7 @@ export default class Controller {
   }
 
   onMouseDown = (e) => {
-    const target = e.target;
+    const { target } = e;
 
     if (target.classList.contains("task")) {
       this.shiftX = e.clientX - e.target.getBoundingClientRect().left;
@@ -104,7 +103,6 @@ export default class Controller {
       this.proectionAct(e);
     }
   };
-
 
   onMouseOver = (e) => {
     const closeTask = e.target.querySelector(".close-task");
