@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.board-tasks {
+    cursor: pointer;
+    display: flex;
+    align-items: first baseline;
+    padding: 0.5%;
+    justify-content:space-between;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    background: #107abb;
+    opacity: 0.8;
+    overflow: hidden;
+}
+
+.card-tasks {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    width: 33%;
+    background-color: rgb(225, 225, 225);
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+h2 {
+    align-self: left;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 5px 0 20px 10px;
+    color: rgb(0, 0, 0);
+}
+
+.tasks {
+    display: block;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.task {
+    position: relative;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-radius: 3px;
+    background-color: white;
+    word-wrap: break-word;
+}
+
+p {
+    /* font-family: 'Roboto', sans-serif; */
+    margin: 2px 16px 2px 0;
+    pointer-events: none;
+}
+
+.description-card {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 50px;
+    resize: none;
+    color: rgb(118, 101, 101);
+    font-size: 16px;
+    padding: 5px;
+    margin-bottom: 2%;
+    border: none;
+    border-bottom: 1px solid gray;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.another {
+    /* font-family: 'Roboto', sans-serif; */
+    margin-top: 3%;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 100;
+    color: rgb(51, 51, 51);
+}
+
+.add-card {
+    color: gray;
+}
+
+.add-button-container {
+    position: relative;
+}
+
+.add-button {
+    width: 28%;
+    height: 30px;
+    color: rgb(51, 51, 51);
+    background-color: transparent;
+    border-color: rgb(51, 51, 51);
+    border-radius: 10px;
+}
+
+.close-description {
+    position: absolute;
+    background-image: url(../svg/x-lg.svg);
+    background-size: contain;
+    top: 70%;
+    left: 90%;
+    width: 32px;
+    height: 32px;
+    
+}
+
+.close-task {
+    position: absolute;
+    display: none;
+    background-image: url(../svg/x-lg.svg);
+    top: 20%;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+}
+
+.invisible {
+    display: none;
+}
