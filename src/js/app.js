@@ -1,7 +1,6 @@
 import InnCardTasks from "./innercardtasks";
 import Controller from "./controller";
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const cardsTodo = new InnCardTasks("todo");
     cardsTodo.bindToDOM();
@@ -21,11 +20,11 @@ document.documentElement.addEventListener("mouseup", controller.onMouseUp);
 
 window.addEventListener("unload", () => {
     const cardTasks = [...document.querySelectorAll(".card-tasks")];
-        for (let item of cardTasks) {
-            const tasks = item.querySelector(".tasks").innerHTML;
-            localStorage.setItem(
+    for (let item of cardTasks) {
+        const tasks = item.querySelector(".tasks").innerHTML;
+        localStorage.setItem(
             item.querySelector("h2").textContent.toLocaleLowerCase(),
-            JSON.stringify(tasks)
-            );
-        }
+            JSON.stringify(tasks),
+        );
+    }
 });
